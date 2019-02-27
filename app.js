@@ -5,12 +5,9 @@ module.exports = app => {
 };
 
 async function createSqlite3(config, app) {
-    logger.info(config);
-    const {
-        logger,
-    } = app;
+    app.logger.info(`sqlite3 config: ${config}`);
     const client = await connectDataBase(config.file);
-    logger.info('sqlite3 connected!');
+    app.logger.info('sqlite3 connected!');
     return client;
 }
 
