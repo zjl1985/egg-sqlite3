@@ -45,6 +45,9 @@ exports.sqlite3 = {
 ```js
 // {app_root}/config/config.default.js
 exports.sqlite3 = {
+  client:{
+    file:''
+  }
 };
 ```
 
